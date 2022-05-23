@@ -4,6 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 
@@ -24,5 +25,5 @@ public class Transfert {
     private Date expirationDate;
 
     @OneToMany(mappedBy = "transfert", cascade = CascadeType.ALL)
-    private Collection<File> files;
+    private Collection<File> files = new ArrayList<>();
 }
