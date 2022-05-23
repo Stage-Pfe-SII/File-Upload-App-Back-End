@@ -1,4 +1,4 @@
-package com.sii.fileupload.servcices;
+package com.sii.fileupload.services;
 
 
 import com.sii.fileupload.entities.File;

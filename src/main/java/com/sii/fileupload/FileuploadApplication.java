@@ -1,17 +1,12 @@
 package com.sii.fileupload;
 
-import com.sii.fileupload.entities.File;
-import com.sii.fileupload.servcices.FileService;
+import com.sii.fileupload.services.FileService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.io.FileInputStream;
-import java.util.List;
-
 @SpringBootApplication
-public class FileuploadApplication implements CommandLineRunner {
+public class FileuploadApplication{
 
     @Autowired
     private FileService fileService;
@@ -20,18 +15,4 @@ public class FileuploadApplication implements CommandLineRunner {
         SpringApplication.run(FileuploadApplication.class, args);
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-        java.io.File f = new java.io.File("C:\\SystemLogo.bmp");
-        FileInputStream inputStream = new FileInputStream(f);
-        byte[] data = inputStream.readAllBytes();
-        File file = new File(null,f.getName(),f.getPath(),data.length,data,null);
-        File file2 = new File(null,f.getName(),f.getPath(),data.length,data,null);
-
-        fileService.save(file);
-        fileService.save(file2);
-
-        List<File> files = fileService.findByPath(file.getPath());
-        System.out.println(files.size());
-    }
 }

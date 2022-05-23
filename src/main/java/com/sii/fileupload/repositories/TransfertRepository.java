@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TransfertRepository extends JpaRepository<Transfert,Long> {
+    Transfert findByPath(String path);
 }

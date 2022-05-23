@@ -1,4 +1,4 @@
-package com.sii.fileupload.servcices;
+package com.sii.fileupload.services;
 
 import com.sii.fileupload.entities.File;
 import com.sii.fileupload.entities.Transfert;
@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class FileServiceImpl implements FileService{
+public class FileServiceImpl implements FileService {
 
     public final FileRepository fileRepository;
 
