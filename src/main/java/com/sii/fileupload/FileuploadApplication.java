@@ -31,8 +31,8 @@ public class FileuploadApplication{
 
             transfertService.save(transfert);
 
-            emailService.sendToSender(transfert);
             emailService.sendToReceiver(transfert);
+            emailService.sendToSender(transfert);
         };
     }
 

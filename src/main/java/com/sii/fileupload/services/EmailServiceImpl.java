@@ -28,7 +28,8 @@ public class EmailServiceImpl implements EmailService {
 
     @Override
     public void sendToSender(Transfert transfert) {
-        sendMail(transfert.getMessage(), transfert.getSender(), transfert.getTitle());
+        String body = renderHtmlCoreForSender(transfert);
+        sendMail(body, transfert.getSender(), transfert.getTitle());
     }
 
     @Override
@@ -70,6 +71,17 @@ public class EmailServiceImpl implements EmailService {
 
     private String renderHtmlCoreForReceiver(Transfert transfert){
         Context context = preparingContextForReceiver(transfert);
-        return templateRendering.render("mailTemplate", context);
+        return templateRendering.render("mailTemplateReceiver", context);
+    }
+
+    private Context preparingContextForSender(Transfert transfert){
+        Context context = new Context();
+        context.setVariable("receiver", transfert.getReceiver());
+        return context;
+    }
+
+    private String renderHtmlCoreForSender(Transfert transfert){
+        Context context = preparingContextForSender(transfert);
+        return templateRendering.render("mailTemplateSender", context);
     }
 }
