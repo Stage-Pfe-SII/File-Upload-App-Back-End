@@ -25,4 +25,8 @@ public class TransfertService {
         transfert.setExpirationDate(expirationDate);
         return transfertRepository.save(transfert);
     }
+
+    public Transfert findByPath(String path){
+        return transfertRepository.findByPath(path);
+    }
 }

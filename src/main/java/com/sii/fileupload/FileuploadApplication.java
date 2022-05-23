@@ -21,11 +21,12 @@ public class FileuploadApplication {
     @Bean
     public CommandLineRunner start(TransfertService transfertService){
         return args -> {
-            testSaveTransfert(transfertService);
+            Transfert transfert = testSaveTransfert(transfertService);
+            testFetchTransfertByPath(transfertService, transfert.getPath());
         };
     }
 
-    private void testSaveTransfert(TransfertService transfertService){
+    private Transfert testSaveTransfert(TransfertService transfertService){
         Transfert transfert = new Transfert();
         transfert.setSender("yassernadir761@gmail.com");
         transfert.setReceiver("yassernadir333@gmail.com");
@@ -37,6 +38,10 @@ public class FileuploadApplication {
                         new File(null, "file2.txt", transfert.getPath(), 1234, new byte[]{}, transfert)
                 )
         );
-        transfertService.save(transfert);
+        return transfertService.save(transfert);
+    }
+
+    private void testFetchTransfertByPath(TransfertService transfertService, String path){
+        System.out.println(transfertService.findByPath(path));
     }
 }
