@@ -1,11 +1,9 @@
 package com.sii.fileupload.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
 
-import java.util.Date;
 
 import static javax.persistence.GenerationType.AUTO;
 
@@ -18,14 +16,11 @@ public class File {
     private String name;
     private String path;
     private long size;
-    private Date uploadDate;
 
     @Lob
     private byte[] content;
 
     @ManyToOne
     @JoinColumn(name = "transfert_id", nullable = false)
-    @JsonIgnore
     private Transfert transfert;
-
 }

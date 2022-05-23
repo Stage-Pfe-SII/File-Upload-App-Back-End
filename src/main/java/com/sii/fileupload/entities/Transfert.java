@@ -2,10 +2,7 @@ package com.sii.fileupload.entities;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 import java.util.Collection;
 import java.util.Date;
@@ -23,8 +20,9 @@ public class Transfert {
     private String receiver;
     private String title;
     private String message;
+    private String path;
     private Date expirationDate;
 
-    @OneToMany(mappedBy = "transfert")
+    @OneToMany(mappedBy = "transfert", cascade = CascadeType.ALL)
     private Collection<File> files;
 }
