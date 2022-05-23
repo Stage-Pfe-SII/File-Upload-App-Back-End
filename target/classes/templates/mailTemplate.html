@@ -1,0 +1,49 @@
+<!DOCTYPE >
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+    <h1 th:text="${body}"></h1>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<body style="margin: 0; padding: 0;font-family: sans-serif;">
+<table style="background-color: #bdbdbd; color: #eeeeee; padding: 5px; border-radius: 5px;margin: auto;padding: 40px;">
+    <tbody>
+    <tr>
+        <td>
+            <h1 style="color: #2962ff;font-size: 2.6em; text-align: center;">SII Transfers</h1>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h3 style="text-align: center;"><span>yassernadir761@gmail.com</span> vous envoie des fichier</h3>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <h6 style="color: #757575;letter-spacing: 1px; text-align:center;"><span th:text="${numberOfItems}"></span> item</span> item<span th:if="${numberOfItems}!=1">s</span>, <span th:text="${size}"></span>MB. Expiré le <span th:text="${dateOfExpressing}"></span> </h6>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <a th:href="@{http://localhost:8080/download/{paths} (paths=${path})}"
+               style="text-decoration: none;color: white;cursor: pointer;background-color: #283593;border-radius: 5px;padding: 10px; margin: 25%;">télécharger
+                les fichiers</a>
+        </td>
+    </tr>
+    <tr style="width: 100%;">
+        <td>
+            <h3 style="margin-top: 15px;"><span th:text="${numberOfItems}"></span> item<span th:if="${numberOfItems}!=1">s</span></h3>
+            <ul style="list-style: none;">
+                <li th:each="name : ${names}">
+                    <span th:text="${name}"></span>
+                </li>
+            </ul>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+<!--p class="card-text" th:text="${body}"></p-->

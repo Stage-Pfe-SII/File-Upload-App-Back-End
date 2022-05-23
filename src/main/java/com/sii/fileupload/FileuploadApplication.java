@@ -3,6 +3,7 @@ package com.sii.fileupload;
 import com.sii.fileupload.entities.Transfert;
 import com.sii.fileupload.services.EmailService;
 import com.sii.fileupload.services.FileService;
+import com.sii.fileupload.services.TransfertService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -20,10 +21,18 @@ public class FileuploadApplication{
     }
 
     @Bean
-    CommandLineRunner start(EmailService emailService){
+    CommandLineRunner start(EmailService emailService, TransfertService transfertService){
         return args -> {
-            emailService.sendToSender(new Transfert());
-            emailService.sendToReceiver(new Transfert());
+            Transfert transfert = new Transfert();
+            transfert.setSender("yassernadir761@gmail.com");
+            transfert.setReceiver("yasser.nadir@sii-maroc.com");
+            transfert.setTitle("testing sending mails");
+            transfert.setMessage("testing .............");
+
+            transfertService.save(transfert);
+
+            emailService.sendToSender(transfert);
+            emailService.sendToReceiver(transfert);
         };
     }
 
