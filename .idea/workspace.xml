@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="927188f4-aa34-4e8a-a685-3756412fe70c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/EmailServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/FileuploadApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/FileuploadApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" afterDir="false" />
-    </list>
+    <list default="true" id="927188f4-aa34-4e8a-a685-3756412fe70c" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -64,6 +55,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm",
     "spring.configuration.checksum": "41e80c3ce414de15ab19d996f7072429"
   }
 }]]></component>
@@ -89,7 +81,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653306191078</updated>
-      <workItem from="1653306195731" duration="44000" />
+      <workItem from="1653306195731" duration="369000" />
     </task>
     <servers />
   </component>
