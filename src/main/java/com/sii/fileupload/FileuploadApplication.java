@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.FileInputStream;
+import java.util.List;
 
 @SpringBootApplication
 public class FileuploadApplication implements CommandLineRunner {
@@ -25,8 +26,12 @@ public class FileuploadApplication implements CommandLineRunner {
         FileInputStream inputStream = new FileInputStream(f);
         byte[] data = inputStream.readAllBytes();
         File file = new File(null,f.getName(),f.getPath(),data.length,data,null);
+        File file2 = new File(null,f.getName(),f.getPath(),data.length,data,null);
 
         fileService.save(file);
+        fileService.save(file2);
 
+        List<File> files = fileService.findByPath(file.getPath());
+        System.out.println(files.size());
     }
 }
