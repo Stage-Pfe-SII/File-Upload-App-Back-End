@@ -20,20 +20,6 @@ public class FileuploadApplication{
         SpringApplication.run(FileuploadApplication.class, args);
     }
 
-    @Bean
-    CommandLineRunner start(EmailService emailService, TransfertService transfertService){
-        return args -> {
-            Transfert transfert = new Transfert();
-            transfert.setSender("yassernadir761@gmail.com");
-            transfert.setReceiver("yasser.nadir@sii-maroc.com");
-            transfert.setTitle("testing sending mails");
-            transfert.setMessage("testing .............");
 
-            transfertService.save(transfert);
-
-            emailService.sendToReceiver(transfert);
-            emailService.sendToSender(transfert);
-        };
-    }
 
 }
