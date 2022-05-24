@@ -40,10 +40,10 @@ public class UploadController {
             transfertService.save(transfert);
             List<File> files = multipartFileListToFileList(multipartFiles);
             transfertService.addFilesToTransfert(transfert,files);
-            /*
+
             emailService.sendToSender(transfert);
             emailService.sendToReceiver(transfert);
-             */
+
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
