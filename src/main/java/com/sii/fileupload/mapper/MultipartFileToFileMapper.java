@@ -12,7 +12,7 @@ public class MultipartFileToFileMapper {
     public static File multipartFileToFile(MultipartFile multipartFile){
         File file = new File();
         try{
-            file.setName(multipartFile.getName());
+            file.setName(multipartFile.getOriginalFilename());
             file.setContent(multipartFile.getBytes());
             file.setSize(multipartFile.getBytes().length);
         }catch(IOException e){
