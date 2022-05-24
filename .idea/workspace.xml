@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="927188f4-aa34-4e8a-a685-3756412fe70c" name="Changes" comment="" />
+    <list default="true" id="927188f4-aa34-4e8a-a685-3756412fe70c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/FileuploadApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/FileuploadApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/EmailServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/EmailServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mailTemplateReceiver.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mailTemplateReceiver.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/EmailServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,20 +57,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YasserNADIR/Documents/File-Upload-App-Back-End/src/main/resources/templates",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "41e80c3ce414de15ab19d996f7072429"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/YasserNADIR/Documents/File-Upload-App-Back-End/src/main/resources/templates&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;41e80c3ce414de15ab19d996f7072429&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sii.fileupload.services" />
@@ -93,7 +100,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1653306191078</updated>
-      <workItem from="1653306195731" duration="4601000" />
+      <workItem from="1653306195731" duration="10071000" />
+      <workItem from="1653379749295" duration="2638000" />
     </task>
     <servers />
   </component>

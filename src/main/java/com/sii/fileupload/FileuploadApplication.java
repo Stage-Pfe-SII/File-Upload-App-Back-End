@@ -20,7 +20,7 @@ public class FileuploadApplication{
         SpringApplication.run(FileuploadApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     CommandLineRunner start(EmailService emailService, TransfertService transfertService){
         return args -> {
             Transfert transfert = new Transfert();
@@ -34,6 +34,6 @@ public class FileuploadApplication{
             emailService.sendToReceiver(transfert);
             emailService.sendToSender(transfert);
         };
-    }
+    }*/
 
 }

@@ -11,7 +11,9 @@ import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
 import java.text.SimpleDateFormat;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 @Service
 public class EmailServiceImpl implements EmailService {
@@ -54,15 +56,19 @@ public class EmailServiceImpl implements EmailService {
 
     private Context preparingContextForReceiver(Transfert transfert){
         Context context = new Context();
+        AtomicReference<Double> size = new AtomicReference<>((double) 0);
         String date = new SimpleDateFormat("dd/MM/yyy")
                             .format(transfert.getExpirationDate());
         List<String> nameOfFiles = transfert.getFiles()
                                     .stream()
                                     .map(file->file.getName())
                                     .collect(Collectors.toList());
+        transfert.getFiles().forEach(file-> size.updateAndGet(v -> {
+            return (double) (v + file.getSize());
+        }));
         context.setVariable("sender", transfert.getSender());
         context.setVariable("numberOfItems", transfert.getFiles().size());
-        context.setVariable("size", 0);
+        context.setVariable("size", parseSize(size.get()));
         context.setVariable("dateOfExpressing", date);
         context.setVariable("path", transfert.getPath());
         context.setVariable("names", nameOfFiles);
@@ -83,5 +89,14 @@ public class EmailServiceImpl implements EmailService {
     private String renderHtmlCoreForSender(Transfert transfert){
         Context context = preparingContextForSender(transfert);
         return templateRendering.render("mailTemplateSender", context);
+    }
+
+    private String parseSize(double size){
+        int i;
+        List<String> units = Stream.of("Octet", "Ko", "Mo", "Go").collect(Collectors.toList());
+        for(i=0; i<units.size() && size>=1024; i++)    size /= 1024;
+
+        size = (double) (int) (size * 100) /100;
+        return (float)size+units.get(i);
     }
 }
