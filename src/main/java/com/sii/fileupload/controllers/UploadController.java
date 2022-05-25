@@ -10,6 +10,7 @@ import com.sii.fileupload.services.EmailService;
 import com.sii.fileupload.services.FileService;
 import com.sii.fileupload.services.TransfertService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +23,7 @@ import static com.sii.fileupload.mapper.MultipartFileToFileMapper.multipartFileL
 
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class UploadController {
 
     private final TransfertService transfertService;
@@ -32,17 +34,17 @@ public class UploadController {
     @PostMapping("/upload")
     public void upload(
             @RequestParam("files") List<MultipartFile> multipartFiles,
-            @RequestParam("transfertDto") String transfertDto
+            @RequestParam("transfertJSON") String transfertJSON
             ) {
         try {
-            TransfertDto trans = new ObjectMapper().readValue(transfertDto, TransfertDto.class);
+            TransfertDto trans = new ObjectMapper().readValue(transfertJSON, TransfertDto.class);
             Transfert transfert = transfertMapper.transfertDtoToTransfert(trans);
             transfertService.save(transfert);
             List<File> files = multipartFileListToFileList(multipartFiles);
             transfertService.addFilesToTransfert(transfert,files);
-
-            emailService.sendToSender(transfert);
-            emailService.sendToReceiver(transfert);
+            System.out.println("a");
+            emailService.sendToSender(transfert);System.out.println("a");
+            emailService.sendToReceiver(transfert);System.out.println("a");
 
         } catch (JsonProcessingException e) {
             e.printStackTrace();
