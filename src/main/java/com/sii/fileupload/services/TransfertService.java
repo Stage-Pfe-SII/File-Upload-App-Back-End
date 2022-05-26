@@ -9,4 +9,6 @@ public interface TransfertService {
     Transfert save(Transfert transfert);
     Transfert findByPath(String path);
     Transfert addFilesToTransfert(Transfert transfert, List<File> files);
+    Transfert incrementDownloadTime(Transfert transfert);
+    void deleteExpiredTransferts();
 }

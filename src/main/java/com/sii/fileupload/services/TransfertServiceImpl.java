@@ -24,6 +24,7 @@ public class TransfertServiceImpl implements TransfertService {
         Date expirationDate = new Date(System.currentTimeMillis()+duration.toMillis());
         transfert.setPath(path);
         transfert.setExpirationDate(expirationDate);
+        transfert.setDownloadTimes(0);
         return transfertRepository.save(transfert);
     }
 
@@ -41,6 +42,25 @@ public class TransfertServiceImpl implements TransfertService {
             transfert.getFiles().add(file);
         });
         return transfert;
+    }
+
+    @Override
+    @Transactional
+    public Transfert incrementDownloadTime(Transfert transfert) {
+        transfert.setDownloadTimes(transfert.getDownloadTimes() + 1);
+        return transfert;
+    }
+
+    @Override
+    @Transactional
+    public void deleteExpiredTransferts() {
+        List<Transfert> transferts = transfertRepository.findAll();
+        transferts.forEach(transfert -> {
+            if(transfert.getExpirationDate().before(new Date())){
+                transfertRepository.delete(transfert);
+            }
+        }
+        );
     }
 
 

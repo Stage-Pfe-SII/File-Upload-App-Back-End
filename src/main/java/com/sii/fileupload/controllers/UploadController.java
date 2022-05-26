@@ -10,6 +10,7 @@ import com.sii.fileupload.services.EmailService;
 import com.sii.fileupload.services.FileService;
 import com.sii.fileupload.services.TransfertService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,7 @@ import java.util.List;
 
 import static com.sii.fileupload.mapper.MultipartFileToFileMapper.multipartFileListToFileList;
 
-
+@CrossOrigin("*")
 @RestController
 @RequiredArgsConstructor
 public class UploadController {
@@ -31,10 +32,11 @@ public class UploadController {
 
     @PostMapping("/upload")
     public void upload(
-            @RequestParam("files") List<MultipartFile> multipartFiles,
-            @RequestParam("transfertDto") String transfertDto
+            @RequestParam("multipartFiles") List<MultipartFile> multipartFiles,
+            @RequestParam("transfert") String transfertDto
             ) {
         try {
+
             TransfertDto trans = new ObjectMapper().readValue(transfertDto, TransfertDto.class);
             Transfert transfert = transfertMapper.transfertDtoToTransfert(trans);
             transfertService.save(transfert);
@@ -43,7 +45,7 @@ public class UploadController {
 
             emailService.sendToSender(transfert);
             emailService.sendToReceiver(transfert);
-
+            transfertService.deleteExpiredTransferts();
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }

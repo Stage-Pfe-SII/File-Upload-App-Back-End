@@ -22,6 +22,7 @@ public class Transfert {
     private String title;
     private String message;
     private String path;
+    private int downloadTimes;
     private Date expirationDate;
 
     @OneToMany(mappedBy = "transfert", cascade = CascadeType.ALL)

@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="927188f4-aa34-4e8a-a685-3756412fe70c" name="Changes" comment="" />
+    <list default="true" id="927188f4-aa34-4e8a-a685-3756412fe70c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/CleanService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/CleanerServiceImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/FileuploadApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/FileuploadApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/controllers/DownloadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/controllers/DownloadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/controllers/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/controllers/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/entities/Transfert.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/entities/Transfert.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/TransfertService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/TransfertService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/TransfertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/TransfertServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/entities/Transfert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/entities/Transfert.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TransfertService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TransfertService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TransfertServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TransfertServiceImpl.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +28,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -50,20 +65,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/YasserNADIR/Documents/File-Upload-App-Back-End/src/main/resources/templates",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "41e80c3ce414de15ab19d996f7072429"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sii.fileupload.services" />
@@ -94,6 +104,7 @@
       <option name="presentableId" value="Default" />
       <updated>1653306191078</updated>
       <workItem from="1653306195731" duration="4601000" />
+      <workItem from="1653469116210" duration="11136000" />
     </task>
     <servers />
   </component>

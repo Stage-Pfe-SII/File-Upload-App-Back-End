@@ -24,11 +24,13 @@ public class DownloadController {
 
     @GetMapping("/download/{path}")
     public void downloadZipFile(@PathVariable String path, HttpServletResponse response)throws Exception{
-        List<File> files = (List<File>) transfertService.findByPath(path).getFiles();
+        Transfert transfert = transfertService.findByPath(path);
+        List<File> files = (List<File>) transfert.getFiles();
         ZipOutputStream zipOutputStream = new ZipOutputStream(response.getOutputStream());
         response.setContentType("application/zip");
         response.setStatus(HttpServletResponse.SC_OK);
         response.setHeader(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"file.zip\"");
+        transfertService.incrementDownloadTime(transfert);
         files.forEach(file -> {
             ZipEntry entry = new ZipEntry(file.getName());
             entry.setSize(file.getSize());
