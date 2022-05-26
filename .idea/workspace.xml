@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="927188f4-aa34-4e8a-a685-3756412fe70c" name="Changes" comment="">
+<<<<<<< HEAD
       <change afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/CleanService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/CleanerServiceImp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
@@ -17,6 +18,19 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/TransfertServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/services/TransfertServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/entities/Transfert.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/entities/Transfert.class" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/controllers/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sii/fileupload/controllers/UploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/FileuploadApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/entities/File.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/entities/File.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/repositories/FileRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/repositories/FileRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/EmailServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/EmailServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/FileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/FileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/FileServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/FileServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TemplateRenderingImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TemplateRenderingImpl.class" afterDir="false" />
+>>>>>>> 2e94929ea84627f358069855a506b78d9bab9c57
       <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TransfertService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TransfertService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TransfertServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/sii/fileupload/services/TransfertServiceImpl.class" afterDir="false" />
     </list>
@@ -65,6 +79,7 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent">
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
@@ -74,6 +89,22 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/YasserNADIR/Documents/File-Upload-App-Back-End/src/main/resources/templates&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;41e80c3ce414de15ab19d996f7072429&quot;
+  }
+}</component>
+>>>>>>> 2e94929ea84627f358069855a506b78d9bab9c57
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.sii.fileupload.services" />

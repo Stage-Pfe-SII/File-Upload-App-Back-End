@@ -20,9 +20,9 @@ import java.util.List;
 
 import static com.sii.fileupload.mapper.MultipartFileToFileMapper.multipartFileListToFileList;
 
-@CrossOrigin("*")
 @RestController
 @RequiredArgsConstructor
+@CrossOrigin("*")
 public class UploadController {
 
     private final TransfertService transfertService;
@@ -32,12 +32,11 @@ public class UploadController {
 
     @PostMapping("/upload")
     public void upload(
-            @RequestParam("multipartFiles") List<MultipartFile> multipartFiles,
-            @RequestParam("transfert") String transfertDto
+            @RequestParam("files") List<MultipartFile> multipartFiles,
+            @RequestParam("transfertJSON") String transfertJSON
             ) {
         try {
-
-            TransfertDto trans = new ObjectMapper().readValue(transfertDto, TransfertDto.class);
+            TransfertDto trans = new ObjectMapper().readValue(transfertJSON, TransfertDto.class);
             Transfert transfert = transfertMapper.transfertDtoToTransfert(trans);
             transfertService.save(transfert);
             List<File> files = multipartFileListToFileList(multipartFiles);
