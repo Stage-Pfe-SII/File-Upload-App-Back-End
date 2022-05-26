@@ -1,5 +1,6 @@
 package com.sii.fileupload.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,6 +23,7 @@ public class File {
     private long size;
 
     @Lob
+    @JsonIgnore
     private byte[] content;
 
     @ManyToOne

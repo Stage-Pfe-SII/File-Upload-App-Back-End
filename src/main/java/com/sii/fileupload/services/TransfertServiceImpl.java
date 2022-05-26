@@ -29,6 +29,11 @@ public class TransfertServiceImpl implements TransfertService {
     }
 
     @Override
+    public List<Transfert> getAllTransferts() {
+        return transfertRepository.findAll();
+    }
+
+    @Override
     public Transfert findByPath(String path){
         return transfertRepository.findByPath(path);
     }

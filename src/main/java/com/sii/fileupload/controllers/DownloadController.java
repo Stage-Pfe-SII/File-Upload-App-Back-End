@@ -2,6 +2,7 @@ package com.sii.fileupload.controllers;
 
 import com.sii.fileupload.entities.File;
 import com.sii.fileupload.entities.Transfert;
+import com.sii.fileupload.excpetions.TransfertNotFoundException;
 import com.sii.fileupload.services.TransfertService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -25,6 +26,9 @@ public class DownloadController {
     @GetMapping("/download/{path}")
     public void downloadZipFile(@PathVariable String path, HttpServletResponse response)throws Exception{
         Transfert transfert = transfertService.findByPath(path);
+        if(transfert == null){
+            throw new TransfertNotFoundException("the transfert with the path "+path+" does not exist");
+        }
         List<File> files = (List<File>) transfert.getFiles();
         ZipOutputStream zipOutputStream = new ZipOutputStream(response.getOutputStream());
         response.setContentType("application/zip");
