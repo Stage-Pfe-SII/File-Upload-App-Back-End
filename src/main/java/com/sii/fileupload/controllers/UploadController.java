@@ -7,6 +7,7 @@ import com.sii.fileupload.entities.File;
 import com.sii.fileupload.entities.Transfert;
 import com.sii.fileupload.mapper.TransfertMapper;
 import com.sii.fileupload.services.EmailService;
+import com.sii.fileupload.services.EncryptionService;
 import com.sii.fileupload.services.FileService;
 import com.sii.fileupload.services.TransfertService;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +30,8 @@ public class UploadController {
     private final FileService fileService;
     private final EmailService emailService;
     private final TransfertMapper transfertMapper;
+    private final EncryptionService encryptionService;
+
 
     @PostMapping("/upload")
     public void upload(
@@ -40,8 +43,14 @@ public class UploadController {
             Transfert transfert = transfertMapper.transfertDtoToTransfert(trans);
             transfertService.save(transfert);
             List<File> files = multipartFileListToFileList(multipartFiles);
+            files.forEach(file -> {
+                try {
+                    encryptionService.encrypt(file);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            });
             transfertService.addFilesToTransfert(transfert,files);
-
             emailService.sendToSender(transfert);
             emailService.sendToReceiver(transfert);
             transfertService.deleteExpiredTransferts();
